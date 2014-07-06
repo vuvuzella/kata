@@ -33,23 +33,37 @@ var receiveMails = function(fileName) {
 /**** -END- Asynchronous Functions ****/
 
 /**** - Begin non asynchronous functions */
+/* Array printing function.. For Debug only? */
 var printArray = function(arr) {
     console.log("continuing the normal operation");
     var split = arr.toString().split("\n");
     console.log(split);
 };
+/* 
+ * startsWith() 
+ * input:   array of strings,
+ *          a word to be searched
+ * output:  True if word is found.
+ *          otherwise, False
+ */
 var startsWith = function(arr, word) {      // Returns true if word is found.
                                             // Regardless the case.
     var split = arr.toString().split("\n"); // First, split by newLine
     for (var i = 0; i < split.length; i++) {
         var firstLine = split[i].split(" ");    // Second split each line by
-        for (j in firstLine) {                  // space
+        for (var j in firstLine) {              // space
             console.log(firstLine[j]);
             if(firstLine[j].toLowerCase() == word.toLowerCase())
                 return true;                // Return true if word mathces
         }
     }
     return false;
+};
+var str_input = "born 15/11/2003 (mother Spot): White Fang";
+var between = function(str_input, first, second) {
+    var firstIndex = str_input.indexOf(first) + first.length;
+    var secondIndex = str_input.indexOf(second);
+    return str_input.slice(firstIndex, secondIndex);
 };
 /**** -END- non asynchronous functions ****/
 
@@ -67,11 +81,12 @@ setTimeout(function(){  // Execution is moved to the last of the exec stack
      * certain events, put them in another setTimeout?
      */
     setTimeout(function() {
-        printArray(mails.toString());  // printArray requires a finished receiveMails()
+        // printArray(mails.toString());  // printArray requires a finished receiveMails()
+        console.log(between(str_input, "(mother ", ")"));
     }, 1000);
 }, 1000);
 
 /* The "thing" that will be seen by the user first */
-console.log('Please wait while ' + filename + ' file is being read.");
+console.log('Please wait while ' + filename + ' file is being read.');
 
 
