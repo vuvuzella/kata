@@ -72,6 +72,6 @@ setTimeout(function(){  // Execution is moved to the last of the exec stack
 }, 1000);
 
 /* The "thing" that will be seen by the user first */
-console.log('Please wait while ' + filename);
+console.log('Please wait while ' + filename + ' file is being read.");
 
 
