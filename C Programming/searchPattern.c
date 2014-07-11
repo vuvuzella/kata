@@ -45,3 +45,17 @@ int* getLine(char str_input[], int max) {
     int index[count] = {};
 
 }
+
+/*
+ * http://mobile.skillport.books24x7.com
+ * ipad - http://skillport.books24x7.com
+ * Your group code is:  DJVT8 
+ * Your username is:  LDAP
+ * pass: s79hd3v5
+ *
+ * char arr[12];
+ * char *cptr;
+ *
+ * https://neclearning.skillport.com/skillportfe/main.action?content=home
+ *
+ */
